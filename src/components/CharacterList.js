@@ -11,12 +11,12 @@ export default function CharacterList() {
   const [allButton, setAllButton] = useState(false);
 
   useEffect(() => {
-    console.log('inside effect')
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
     axios
       .get(`https://rickandmortyapi.com/api/character/${searchCharacter}`)
       .then(response => {
+        console.log(response)
         setCharacterList(response.data.results);
       })
       .catch(error => {
@@ -26,7 +26,6 @@ export default function CharacterList() {
 
   function onSearch(e, name) {
     e.preventDefault();
-    console.log('inside function name', name)
     setSearchCharacter(`?name=${name}`)
   }
 
