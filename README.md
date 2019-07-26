@@ -103,9 +103,9 @@ Add a Router to this application by using [React Router](https://reacttraining.c
 
 Add a search component to your pages.
 
-- [ ] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
+- [x] Add the `<SearchForm />` component (see `./components/SearchForm.js`).
   - [ ] Wire up the `onSearch(name)` callback prop to support [querying the API](https://rickandmortyapi.com/documentation/#filter-characters). (To search for `rick`, you would request `/api/character/?name=rick`.)
-  - [ ] _Remember:_ `useEffect` must reference any state on which it _depends_.
+  - [x] _Remember:_ `useEffect` must reference any state on which it _depends_.
 - [ ] Persist search form field(s) by using the custom hook `useLocalStorage`.
 
 > 💡**reminder:** `git commit -am 'Stretch Progress'`
