@@ -22,7 +22,6 @@ export default function LocationsList() {
 
   return (
     <section className='grid-view'>
-      {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {locationsList.map((location, index) => (
          <LocationCard key={index} location={location} />
       ))}

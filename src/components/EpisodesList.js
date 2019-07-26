@@ -13,7 +13,6 @@ export default function EpisodesList() {
     axios
       .get('https://rickandmortyapi.com/api/episode/')
       .then(response => {
-        console.log('EPISODES', response.data.results)
         setEpisodesList(response.data.results);
       })
       .catch(error => {
@@ -23,7 +22,6 @@ export default function EpisodesList() {
 
   return (
     <section className='grid-view'>
-      {/* <h2>TODO: `array.map()` over your state here!</h2> */}
       {episodesList.map((episode, index) => (
          <EpisodeCard key={index} episode={episode} />
       ))}
